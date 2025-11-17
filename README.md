@@ -7,6 +7,8 @@
 
 `mintinstall-devuan.sh` es un script diseñado para **configurar APT** de manera que permita instalar **solo el paquete `mintinstall`** desde el repositorio oficial de Quirinux, junto con sus dependencias necesarias.  
 
+El paquete `mintinstall` desde el repositorio de Quirinux es una versión modificada por Charlie Martínez del Centro de Software oficial de **Linux Mint**, el único hasta la fecha que funciona 100% sobre el sistema Devuan. Esta versión modificada del paquete fue realizada originalmente para el sistema **Quirinux** y elimina la dependencia de SystemD.
+
 Este script está pensado para los sistemas **Devuan Daedalus 5** y **Devuan Excalibur 6** y garantiza que **el resto de los paquetes permanezcan en los repositorios oficiales de Devuan**, evitando conflictos o instalaciones indeseadas desde Quirinux.
 
 ---
