@@ -1,5 +1,5 @@
 Package: aptdaemon
-Version: 1.1.2+bzr982-0ubuntu39mint1
+Version: 1.1.4+bzr982-0ubuntu39mint1
 Architecture: all
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Installed-Size: 2192
