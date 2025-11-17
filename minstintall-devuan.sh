@@ -1,10 +1,10 @@
 #!/bin/bash
 # ==============================================================
-# Nombre:			mintinstall-devuan.sh
-# Autor:			Charlie Martínez® <cmartinez@quirinux.org>
-# Licencia:			https://www.gnu.org/licenses/gpl-3.0.txt
-# Utilidad:			Configurar APT para instalar solo mintinstall desde el repositorio de Quirinux
-# Distro:			Quirinux 2.x (Devuan Daedalus)
+# Nombre:            mintinstall-devuan.sh
+# Autor:            Charlie Martínez® <cmartinez@quirinux.org>
+# Licencia:            https://www.gnu.org/licenses/gpl-3.0.txt
+# Utilidad:            Configurar APT para instalar solo mintinstall desde el repositorio de Quirinux
+# Distro:            Quirinux 2.x (Devuan Daedalus)
 # ==============================================================
 
 set -e
@@ -12,7 +12,7 @@ set -e
 echo "=== Instalando clave y repositorio oficial de Quirinux ==="
 
 # Descargar e instalar quirinux-keyring (firma GPG)
-wget -q https://repo.quirinux.org/pool/main/q/quirinux-keyring/quirinux-keyring_1.0_all.deb -O /tmp/quirinux-keyring.deb
+wget -q https://repo.quirinux.org/pool/main/q/quirinux-keyring/quirinux-keyring_1.0.1_all.deb -O /tmp/quirinux-keyring.deb
 sudo dpkg -i /tmp/quirinux-keyring.deb
 
 # Descargar e instalar quirinux-repo (añade el sources.list.d)
@@ -22,27 +22,24 @@ sudo dpkg -i /tmp/quirinux-repo.deb
 echo "=== Actualizando índices de APT ==="
 sudo apt update
 
-echo "=== Detectando campo de release del repo de Quirinux ==="
-RELEASE_FIELD=$(apt-cache policy | grep -A1 'repo.quirinux.org' | grep "release" | awk '{print $2}' | cut -d'=' -f1 | head -n1)
-
-if [ -z "$RELEASE_FIELD" ]; then
-    echo "No se detectó el campo release; usaremos 'origin' como valor por defecto."
-    RELEASE_FIELD="origin"
-fi
-
-echo "Campo de release detectado: $RELEASE_FIELD"
-
-echo "=== Configurando APT pinning para permitir solo mintinstall ==="
-
+echo "=== Configurando APT pinning para permitir solo mintinstall y sus dependencias ==="
+# Configuración de pinning para permitir solo mintinstall y sus dependencias
 PREF_FILE="/etc/apt/preferences.d/quirinux"
 sudo tee "$PREF_FILE" > /dev/null <<EOF
+# Establecer el pin para todos los paquetes de Quirinux
 Package: *
-Pin: $RELEASE_FIELD "repo.quirinux.org"
-Pin-Priority: 100
+Pin: origin "repo.quirinux.org"
+Pin-Priority: 1
 
+# Permitir mintinstall y sus dependencias a través del repositorio de Quirinux
 Package: mintinstall
-Pin: $RELEASE_FIELD "repo.quirinux.org"
+Pin: origin "repo.quirinux.org"
 Pin-Priority: 1001
+
+# Permitir las dependencias de mintinstall
+Package: *
+Pin: release o=quirinux
+Pin-Priority: 100
 EOF
 
 echo "Archivo de preferencias creado en $PREF_FILE"
