@@ -1,0 +1,32 @@
+Package: aptdaemon
+Version: 1.1.1+bzr982-0ubuntu39mint1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 2192
+Depends: python3:any (>= 3.2~), gir1.2-glib-2.0, python3-aptdaemon (= 1.1.1+bzr982-0ubuntu39mint1), python3-gi, pkexec, polkitd, libpolkit-gobject-1-0, libpolkit-agent-1-0
+Breaks: python3-aptdaemon.pkcompat, software-center (<< 1.1.21), policykit-1
+Replaces: python3-aptdaemon.pkcompat, policykit-1
+Provides: policykit-1
+Section: admin
+Priority: extra
+Homepage: https://launchpad.net/aptdaemon
+Description: transaction based package management service
+ Aptdaemon allows normal users to perform package management tasks, e.g.
+ refreshing the cache, upgrading the system, installing or removing software
+ packages.
+ .
+ Currently it comes with the following main features:
+ .
+  - Programming language independent D-Bus interface, which allows one to
+    write clients in several languages
+  - Runs only if required (D-Bus activation)
+  - Fine grained privilege management using PolicyKit, e.g. allowing all
+    desktop user to query for updates without entering a password
+  - Support for media changes during installation from DVD/CDROM
+  - Support for debconf (Debian's package configuration system)
+  - Support for attaching a terminal to the underlying dpkg call
+ .
+ This package contains the aptd script and all the data files required to run
+ the daemon. Moreover it contains the aptdcon script, which is a command
+ line client for aptdaemon. The API is not stable yet.
+Original-Maintainer: Julian Andres Klode <jak@debian.org>
