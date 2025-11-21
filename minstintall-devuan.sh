@@ -45,7 +45,7 @@ done
 
 # 3) Instalar los .deb:
 echo "====> Instalando paquetes..."
-apt install -y /tmp/mintinstall/.*.deb
+apt install -y /tmp/mintinstall/*.deb
 
 echo ""
 echo "========================================================"
