@@ -54,7 +54,7 @@ echo "========================================================"
 echo " Accede al centro de software desde:"
 echo " >>> Menu Aplicaciones > Otras > Centro de software"
 echo ""
-echo "" Si necesitas instalar la compatibilidad con Flatpak:
-echo " >>> Menú Aplicaciones > Configuración > Flatpak-Config
+echo "" Si necesitas instalar la compatibilidad con Flatpak:"
+echo " >>> Menú Aplicaciones > Configuración > Flatpak-Config"
 echo "========================================================"
 echo ""
