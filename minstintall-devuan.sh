@@ -8,18 +8,19 @@
 # ==============================================================
 # Ejecutar como ROOT (sin sudo)
 # ==============================================================
+clear
 
-# 1) Verificar que wget esté instalado
-echo "[*] Verificando instalación de wget..."
+echo ""
+echo "====> Verificando que esté instalado wget..."
 if ! command -v wget >/dev/null 2>&1; then
-    echo "[*] wget no está instalado. Instalando..."
+    echo "====>  wget no está instalado. Instalando..."
     apt update
     apt install -y wget
 else
-    echo "[*] wget ya está instalado."
+    echo "====>  wget ya está instalado."
 fi
 
-# 2) Crear carpeta destino
+echo "====> Creando carpeta de destino /tmp/mintinstall..."
 DEST="/tmp/mintinstall"
 mkdir -p "$DEST"
 
@@ -37,13 +38,23 @@ URLS=(
 "https://repo.quirinux.org/pool/main/f/flatpakconfig/flatpakconfig_1.3.0_all.deb"
 )
 
-echo "[*] Descargando paquetes .deb..."
+echo "====> Descargando paquetes .deb necesarios..."
 for url in "${URLS[@]}"; do
     wget -P "$DEST" "$url"
 done
 
-# 3) Instalar los .deb exactamente como solicitaste:
-echo "[*] Instalando paquetes..."
+# 3) Instalar los .deb:
+echo "====> Instalando paquetes..."
 apt install -y /tmp/mintinstall/.*.deb
 
-echo "[*] Proceso completado."
+echo ""
+echo "========================================================"
+echo " INSTALACIÓN COMPLETA
+echo "========================================================"
+echo " Accede al centro de software desde:"
+echo " >>> Menu Aplicaciones > Otras > Centro de software"
+echo ""
+echo "" Si necesitas instalar la compatibilidad con Flatpak:
+echo " >>> Menú Aplicaciones > Configuración > Flatpak-Config
+echo "========================================================"
+echo ""
