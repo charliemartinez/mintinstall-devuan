@@ -35,7 +35,7 @@ URLS=(
 "https://repo.quirinux.org/pool/main/m/mint-translations/mint-translations_2023.07.07_all.deb"
 "https://repo.quirinux.org/pool/main/m/mintinstall/mintinstall_8.4.4_all.deb"
 "https://repo.quirinux.org/pool/main/a/app-install-data-ubuntu/app-install-data_15.12_all.deb"
-"https://repo.quirinux.org/pool/main/f/flatpakconfig/flatpakconfig_1.3.2_all.deb"
+"https://repo.quirinux.org/pool/main/f/flatpakconfig/flatpakconfig_1.3.4_all.deb"
 )
 
 echo "====> Descargando paquetes .deb necesarios..."
