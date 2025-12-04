@@ -8,7 +8,11 @@
 # ==============================================================
 # Ejecutar como ROOT (sin sudo)
 # ==============================================================
+
 clear
+
+# Asegurar PATH completo en sistemas tipo Devuan
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 echo ""
 echo "====> Verificando que esté instalado wget..."
