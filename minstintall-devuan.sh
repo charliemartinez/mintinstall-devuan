@@ -37,7 +37,7 @@ URLS=(
 "https://repo.quirinux.org/pool/main/p/python-defer/python3-defer_1.0.6+mint1_all.deb"
 "https://repo.quirinux.org/pool/main/m/mint-common/mint-common_2.3.0_all.deb"
 "https://repo.quirinux.org/pool/main/m/mint-translations/mint-translations_2023.07.07_all.deb"
-"https://repo.quirinux.org/pool/main/m/mintinstall/mintinstall_8.4.4_all.deb"
+"https://repo.quirinux.org/pool/main/m/mintinstall/mintinstall_8.4.6_all.deb"
 "https://repo.quirinux.org/pool/main/a/app-install-data-ubuntu/app-install-data_15.12_all.deb"
 "https://repo.quirinux.org/pool/main/f/flatpakconfig/flatpakconfig_1.3.5_all.deb"
 )
