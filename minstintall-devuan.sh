@@ -30,16 +30,16 @@ mkdir -p "$DEST"
 
 # Lista de URLs a descargar
 URLS=(
-"https://repo.quirinux.org/pool/main/a/aptdaemon/aptdaemon-data_1.1.1+bzr982-0ubuntu39mint1_all.deb"
-"https://repo.quirinux.org/pool/main/a/aptdaemon/aptdaemon_1.1.4+bzr982-0ubuntu39mint1_all.deb"
-"https://repo.quirinux.org/pool/main/a/aptdaemon/python3-aptdaemon.gtk3widgets_1.1.1+bzr982-0ubuntu39mint1_all.deb"
-"https://repo.quirinux.org/pool/main/a/aptdaemon/python3-aptdaemon_1.1.1+bzr982-0ubuntu39mint1_all.deb"
-"https://repo.quirinux.org/pool/main/p/python-defer/python3-defer_1.0.6+mint1_all.deb"
-"https://repo.quirinux.org/pool/main/m/mint-common/mint-common_2.3.0_all.deb"
-"https://repo.quirinux.org/pool/main/m/mint-translations/mint-translations_2023.07.07_all.deb"
-"https://repo.quirinux.org/pool/main/m/mintinstall/mintinstall_8.4.6_all.deb"
-"https://repo.quirinux.org/pool/main/a/app-install-data-ubuntu/app-install-data_15.12_all.deb"
-"https://repo.quirinux.org/pool/main/f/flatpakconfig/flatpakconfig_1.3.5_all.deb"
+"https://repo.quirinux.org/pool/main/a/aptdaemon/aptdaemon-data_1.1.5+q2_all.deb"
+"https://repo.quirinux.org/pool/main/a/aptdaemon/aptdaemon_1.1.9+q2_all.deb"
+"https://repo.quirinux.org/pool/main/a/aptdaemon/python3-aptdaemon.gtk3widgets_1.1.6+q2_all.deb"
+"https://repo.quirinux.org/pool/main/a/aptdaemon/python3-aptdaemon_1.1.3+q2_all.deb"
+"https://repo.quirinux.org/pool/main/p/python-defer/python3-defer_1.0.7+q2_all.deb"
+"https://repo.quirinux.org/pool/main/m/mint-common/mint-common_2.3.1+q2_all.deb"
+"https://repo.quirinux.org/pool/main/m/mint-translations/mint-translations_2023.07.08+q2_all.deb"
+"https://repo.quirinux.org/pool/main/m/mintinstall/mintinstall_8.4.7+q2_all.deb"
+"https://repo.quirinux.org/pool/main/a/app-install-data-ubuntu/app-install-data_15.15+q2_all.deb"
+"https://repo.quirinux.org/pool/main/f/flatpakconfig/flatpakconfig_1.3.6+q2_all.deb"
 )
 
 echo "====> Descargando paquetes .deb necesarios..."
